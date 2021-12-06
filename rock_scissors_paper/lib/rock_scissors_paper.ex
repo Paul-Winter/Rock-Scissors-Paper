@@ -31,5 +31,14 @@ defmodule RockScissorsPaper do
   def play() do
     result = winner({player_guess(), computer_guess()})
     IO.puts("Winner is #{result}!\n")
+
+    guess = IO.gets("\nWant more? ('Y' for 'Yes'))\n")
+    guess = String.trim(guess) |> String.downcase()
+
+    if (guess == "y") do
+      play()
+    else
+      :ok
+    end
   end
 end
