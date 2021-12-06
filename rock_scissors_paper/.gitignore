@@ -20,7 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-stone_scissors_and_paper-*.tar
+rock_scissors_paper-*.tar
 
 
 # Temporary files for e.g. tests

@@ -1,2 +1,2 @@
-# Stone-Scissors-and-Paper
+# Rock-Scissors-Paper
 Simple console game
