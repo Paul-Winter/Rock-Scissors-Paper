@@ -1,6 +1,6 @@
 defmodule RockScissorsPaper do
   def player_guess() do
-    guess = IO.gets("\n\nВаш ход: rock, scissors or paper?\n")
+    guess = IO.gets("\n\nВаш ход: rock, scissors или paper?\n")
     guess = String.trim(guess) |> String.downcase()
 
     if guess in ["rock", "scissors", "paper"] do
