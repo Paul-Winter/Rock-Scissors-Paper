@@ -1,19 +1,19 @@
 defmodule RockScissorsPaper do
   def player_guess() do
-    guess = IO.gets("\n\nYour hand: rock, scissors or paper?\n")
+    guess = IO.gets("\n\nВаш ход: rock, scissors or paper?\n")
     guess = String.trim(guess) |> String.downcase()
 
     if guess in ["rock", "scissors", "paper"] do
       guess
     else
-      IO.puts("Wrong!\n")
+      IO.puts("Ошибка!\n")
       player_guess()
     end
   end
 
   def computer_guess() do
     guess = Enum.random(["rock", "scissors", "paper"])
-    IO.puts("\nComputer's hand is: #{guess}\n")
+    IO.puts("\nХод компьютера: #{guess}\n")
     guess
   end
 
@@ -30,9 +30,9 @@ defmodule RockScissorsPaper do
 
   def play() do
     result = winner({player_guess(), computer_guess()})
-    IO.puts("Winner is #{result}!\n")
+    IO.puts("Победитель - #{result}!\n")
 
-    guess = IO.gets("\nWant more? ('Y' for 'Yes'))\n")
+    guess = IO.gets("\nИграть ещё? ('Y' для 'ДА'))\n")
     guess = String.trim(guess) |> String.downcase()
 
     if (guess == "y") do
