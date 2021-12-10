@@ -29,8 +29,7 @@ defmodule RockScissorsPaper do
   def winner(_), do: :friendship
 
   def play() do
-    result = winner({player_guess(), computer_guess()})
-    IO.puts("Победитель - #{result}!\n")
+    IO.puts("Победитель - #{winner({player_guess(), computer_guess()})}!\n")
 
     guess = IO.gets("\nИграть ещё? ('Y' для 'ДА'))\n")
     guess = String.trim(guess) |> String.downcase()
